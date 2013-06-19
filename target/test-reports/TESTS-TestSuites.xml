@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="1" failures="3" hostname="CMH-MIS-4TT24W1" id="0" name="DataBindingServiceIntTests" package="poc_commandobject" tests="4" time="0.409" timestamp="2013-06-19T17:24:22">
+      <properties />
+
+      <testcase classname="poc_commandobject.DataBindingServiceIntTests" name="testBindingDomain" time="0.34">
+          <error message="Validation Error(s) occurred during save():&#xa;- Field error in object &apos;poc_commandobject.Message&apos; on field &apos;departure&apos;: rejected value [null]; codes [poc_commandobject.Message.departure.nullable.error.poc_commandobject.Message.departure,poc_commandobject.Message.departure.nullable.error.departure,poc_commandobject.Message.departure.nullable.error.java.util.Date,poc_commandobject.Message.departure.nullable.error,message.departure.nullable.error.poc_commandobject.Message.departure,message.departure.nullable.error.departure,message.departure.nullable.error.java.util.Date,message.departure.nullable.error,poc_commandobject.Message.departure.nullable.poc_commandobject.Message.departure,poc_commandobject.Message.departure.nullable.departure,poc_commandobject.Message.departure.nullable.java.util.Date,poc_commandobject.Message.departure.nullable,message.departure.nullable.poc_commandobject.Message.departure,message.departure.nullable.departure,message.departure.nullable.java.util.Date,message.departure.nullable,nullable.poc_commandobject.Message.departure,nullable.departure,nullable.java.util.Date,nullable]; arguments [departure,class poc_commandobject.Message]; default message [Property [{0}] of class [{1}] cannot be null]&#xa;" type="grails.validation.ValidationException">grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object &apos;poc_commandobject.Message&apos; on field &apos;departure&apos;: rejected value [null]; codes [poc_commandobject.Message.departure.nullable.error.poc_commandobject.Message.departure,poc_commandobject.Message.departure.nullable.error.departure,poc_commandobject.Message.departure.nullable.error.java.util.Date,poc_commandobject.Message.departure.nullable.error,message.departure.nullable.error.poc_commandobject.Message.departure,message.departure.nullable.error.departure,message.departure.nullable.error.java.util.Date,message.departure.nullable.error,poc_commandobject.Message.departure.nullable.poc_commandobject.Message.departure,poc_commandobject.Message.departure.nullable.departure,poc_commandobject.Message.departure.nullable.java.util.Date,poc_commandobject.Message.departure.nullable,message.departure.nullable.poc_commandobject.Message.departure,message.departure.nullable.departure,message.departure.nullable.java.util.Date,message.departure.nullable,nullable.poc_commandobject.Message.departure,nullable.departure,nullable.java.util.Date,nullable]; arguments [departure,class poc_commandobject.Message]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at poc_commandobject.DataBindingServiceIntTests.testBindingDomain(DataBindingServiceIntTests.groovy:32)
+</error>
+
+      </testcase>
+
+      <testcase classname="poc_commandobject.DataBindingServiceIntTests" name="testBinding" time="0.039">
+          <failure message="org.junit.ComparisonFailure: expected:&lt;[2013-06-19T10:00:15Z]&gt; but was:&lt;[null]&gt;" type="junit.framework.AssertionFailedError">	at poc_commandobject.DataBindingServiceIntTests.testBinding(DataBindingServiceIntTests.groovy:49)
+</failure>
+
+      </testcase>
+
+      <testcase classname="poc_commandobject.DataBindingServiceIntTests" name="testBindingNotBlank" time="0.0090">
+          <failure message="java.lang.AssertionError" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: java.lang.AssertionError
+	at poc_commandobject.DataBindingServiceIntTests.testBindingNotBlank(DataBindingServiceIntTests.groovy:58)
+</failure>
+
+      </testcase>
+
+      <testcase classname="poc_commandobject.DataBindingServiceIntTests" name="testBindingDate" time="0.0080">
+          <failure message="org.junit.ComparisonFailure: expected:&lt;[2013-06-19]&gt; but was:&lt;[null]&gt;" type="junit.framework.AssertionFailedError">	at poc_commandobject.DataBindingServiceIntTests.testBindingDate(DataBindingServiceIntTests.groovy:66)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[]]></system-out>
+
+      <system-err><![CDATA[--Output from testBindingDomain--
+--Output from testBinding--
+--Output from testBindingNotBlank--
+--Output from testBindingDate--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

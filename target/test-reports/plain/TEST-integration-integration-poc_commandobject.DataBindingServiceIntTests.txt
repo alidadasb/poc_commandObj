@@ -1,0 +1,35 @@
+Testsuite: poc_commandobject.DataBindingServiceIntTests
+Tests run: 4, Failures: 3, Errors: 1, Time elapsed: 0.409 sec
+------------- Standard Error -----------------
+--Output from testBindingDomain--
+--Output from testBinding--
+--Output from testBindingNotBlank--
+--Output from testBindingDate--
+------------- ---------------- ---------------
+
+Testcase: testBindingDomain took 0.339 sec
+	Caused an ERROR
+Validation Error(s) occurred during save():
+- Field error in object 'poc_commandobject.Message' on field 'departure': rejected value [null]; codes [poc_commandobject.Message.departure.nullable.error.poc_commandobject.Message.departure,poc_commandobject.Message.departure.nullable.error.departure,poc_commandobject.Message.departure.nullable.error.java.util.Date,poc_commandobject.Message.departure.nullable.error,message.departure.nullable.error.poc_commandobject.Message.departure,message.departure.nullable.error.departure,message.departure.nullable.error.java.util.Date,message.departure.nullable.error,poc_commandobject.Message.departure.nullable.poc_commandobject.Message.departure,poc_commandobject.Message.departure.nullable.departure,poc_commandobject.Message.departure.nullable.java.util.Date,poc_commandobject.Message.departure.nullable,message.departure.nullable.poc_commandobject.Message.departure,message.departure.nullable.departure,message.departure.nullable.java.util.Date,message.departure.nullable,nullable.poc_commandobject.Message.departure,nullable.departure,nullable.java.util.Date,nullable]; arguments [departure,class poc_commandobject.Message]; default message [Property [{0}] of class [{1}] cannot be null]
+
+grails.validation.ValidationException: Validation Error(s) occurred during save():
+- Field error in object 'poc_commandobject.Message' on field 'departure': rejected value [null]; codes [poc_commandobject.Message.departure.nullable.error.poc_commandobject.Message.departure,poc_commandobject.Message.departure.nullable.error.departure,poc_commandobject.Message.departure.nullable.error.java.util.Date,poc_commandobject.Message.departure.nullable.error,message.departure.nullable.error.poc_commandobject.Message.departure,message.departure.nullable.error.departure,message.departure.nullable.error.java.util.Date,message.departure.nullable.error,poc_commandobject.Message.departure.nullable.poc_commandobject.Message.departure,poc_commandobject.Message.departure.nullable.departure,poc_commandobject.Message.departure.nullable.java.util.Date,poc_commandobject.Message.departure.nullable,message.departure.nullable.poc_commandobject.Message.departure,message.departure.nullable.departure,message.departure.nullable.java.util.Date,message.departure.nullable,nullable.poc_commandobject.Message.departure,nullable.departure,nullable.java.util.Date,nullable]; arguments [departure,class poc_commandobject.Message]; default message [Property [{0}] of class [{1}] cannot be null]
+
+	at poc_commandobject.DataBindingServiceIntTests.testBindingDomain(DataBindingServiceIntTests.groovy:32)
+
+Testcase: testBinding took 0.039 sec
+	FAILED
+org.junit.ComparisonFailure: expected:<[2013-06-19T10:00:15Z]> but was:<[null]>
+	at poc_commandobject.DataBindingServiceIntTests.testBinding(DataBindingServiceIntTests.groovy:49)
+
+Testcase: testBindingNotBlank took 0.009 sec
+	FAILED
+java.lang.AssertionError
+junit.framework.AssertionFailedError: java.lang.AssertionError
+	at poc_commandobject.DataBindingServiceIntTests.testBindingNotBlank(DataBindingServiceIntTests.groovy:58)
+
+Testcase: testBindingDate took 0.008 sec
+	FAILED
+org.junit.ComparisonFailure: expected:<[2013-06-19]> but was:<[null]>
+	at poc_commandobject.DataBindingServiceIntTests.testBindingDate(DataBindingServiceIntTests.groovy:66)
+

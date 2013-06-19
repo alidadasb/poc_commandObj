@@ -1,0 +1,4 @@
+--Output from testBindingDomain--
+--Output from testBinding--
+--Output from testBindingNotBlank--
+--Output from testBindingDate--
