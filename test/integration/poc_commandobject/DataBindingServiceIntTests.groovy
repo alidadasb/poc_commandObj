@@ -41,12 +41,12 @@ class DataBindingServiceIntTests extends GroovyTestCase{
 
     @Test
     void testBinding() {
-        def map = ['name':"Ali", 'number':"123", 'departure':"2013-06-19 10:00:15.234"]//"Tue Jun 18 16:51:09 EDT 2013"
+        def map = ['name':"Ali", 'number':"123", 'departure':"2013/06/19"]//"Tue Jun 18 16:51:09 EDT 2013"
         binderService.bind(cmd,map)
 
         assertEquals "Ali",  cmd.name
         assertEquals 123   , cmd.number
-        assertEquals "2013-06-19T10:00:15Z"   , cmd.departure.toString()
+        assertEquals Date.parse('yyyy/MM/dd',"2013/06/19")   , cmd.departure.toString()
         assertFalse cmd.hasErrors()
     }
 
@@ -58,7 +58,7 @@ class DataBindingServiceIntTests extends GroovyTestCase{
         assertTrue cmd.hasErrors()
     }
 
-    @Test
+    @Ignore
     void testBindingDate() {
         def map = [name:"Ali",number:"123", departure:"2013-06-19T10:00:15Z"]
         binderService.bind(cmd,map)
